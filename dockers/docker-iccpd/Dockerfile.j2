@@ -21,7 +21,7 @@ RUN dpkg -i \
 debs/{{ deb }}{{' '}}
 {%- endfor %}
 
-COPY ["start.sh", "iccpd.sh", "/usr/bin/"]
+COPY ["start.sh", "iccpd.py", "/usr/bin/"]
 COPY ["supervisord.conf", "/etc/supervisor/conf.d/"]
 COPY ["iccpd.j2", "/usr/share/sonic/templates/"]
 
